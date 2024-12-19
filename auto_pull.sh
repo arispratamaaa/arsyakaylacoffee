@@ -13,7 +13,7 @@ do
     cd "$REPO_DIR"
 
     echo "Pulling latest changes from GitHub..."
-    git pull origin main  # Ganti 'main' dengan nama branch yang kamu gunakan
+    git pull origin master  # Ganti 'main' dengan nama branch yang kamu gunakan
 
     echo "Waiting for $INTERVAL seconds before the next pull..."
     sleep "$INTERVAL"  # Tunggu sesuai interval waktu
