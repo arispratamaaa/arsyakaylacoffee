@@ -6,44 +6,56 @@ body, h1, h2, p, ul, li {
 
 /* Style dasar */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #804a18;
-    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f2ec;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Header */
 header {
-    background-color: #b57113;
-    color: #0c0c0c;
+    background-color: #d48f2c;
+    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Navigasi */
 nav {
-    background-color: #a7770f;
-    color: #fdae05;
+    background-color: #f6ba2d;
+    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-nav ul li a:hover{
-     background-color: gold;
-     border-radius: 1.5rem
-     ;
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav a {
     text-decoration: none;
-    color: #141414;
+    color: #1d1d1d;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+nav a:hover {
+    background-color: #e79e1a;
+    color: white;
 }
 
 /* Konten Utama */
@@ -52,28 +64,56 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 20px;
 }
 
 section {
-    background-color: #8c6625;
-    border: 1px solid #764d02;
-    padding: 10px;
-    margin: 10px;
+    background-color: #fff4e6;
+    border: 1px solid #d48f2c;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     flex: 1;
+    min-width: 250px;
+    max-width: 45%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Sidebar */
 aside {
-    background-color: #8c6625;
-    padding: 10px;
-    margin: 10px;
+    background-color: #fff4e6;
+    padding: 15px;
+    border: 1px solid #d48f2c;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     flex: 1;
+    min-width: 250px;
+    max-width: 45%;
 }
 
 /* Footer */
 footer {
-    background-color: #8c6625;
-    color: #0e0d0d;
+    background-color: #d48f2c;
+    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    section, aside {
+        max-width: 100%;
+    }
 }
